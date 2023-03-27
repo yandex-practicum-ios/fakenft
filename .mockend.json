@@ -17,9 +17,14 @@
         "items": 9
       },
       "title": { "string": ["Peach", "Brown", "White", "Gray", "Yellow", "Green", "Blue", "Beige", "Pink"] } , 
-      "someInt": { "int": {"min": 0, "max": 1000000}}
+      "price": { "int": {"min": 0, "max": 1000000}},
+      "nfts": {
+        "hasMany": "NFT"
+      }
+  },
+  "NFT": {
+    "title": { "string": {} }
   }
-
 }
 
 
