@@ -5,15 +5,15 @@
   "Collection": {
     "_": {
       "data": [
-        { "title": "Peach", "someInt": { "integer": {} } }, 
-        { "title": "Brown" },
-        { "title": "White" },
-        { "title": "Gray" },
-        { "title": "Yellow" },
-        { "title": "Green" },
-        { "title": "Blue" },
-        { "title": "Beige" },
-        { "title": "Pink" }
+        { "title": "Peach", "someInt": { "int": {"min": 0, "max": 1000000} } }, 
+        { "title": "Brown", "someInt": { "int": {"min": 0, "max": 1000000} } },
+        { "title": "White", "someInt": { "int": {"min": 0, "max": 1000000} } },
+        { "title": "Gray", "someInt": { "int": {"min": 0, "max": 1000000} } },
+        { "title": "Yellow", "someInt": { "int": {"min": 0, "max": 1000000} } },
+        { "title": "Green", "someInt": { "int": {"min": 0, "max": 1000000} } },
+        { "title": "Blue", "someInt": { "int": {"min": 0, "max": 1000000} } },
+        { "title": "Beige", "someInt": { "int": {"min": 0, "max": 1000000} } },
+        { "title": "Pink", "someInt": { "int": {"min": 0, "max": 1000000} } }
       ]
     }
   }
