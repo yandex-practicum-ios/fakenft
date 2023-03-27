@@ -3,16 +3,6 @@
     "title": { "string": {} }
   },
   "Collection": {
-    "_": {
-      "data": [
-        {
-          "title": "Peach", 
-          "someInt": { "int": {"min": 0, "max": 1000000}}
-        }
-      ]
-    }
-  },
-  "Bollection": {
       "_": {
         "items": 9
       },
