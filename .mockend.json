@@ -13,8 +13,13 @@
     }
   },
   "Bollection": {
-      "title": { "string": ["Peach", "Beige"] } , 
+      "_": {
+        "items": 9
+      },
+      "title": { "string": ["Peach", "Brown", "White", "Gray", "Yellow", "Green", "Blue", "Beige", "Pink"] } , 
       "someInt": { "int": {"min": 0, "max": 1000000}}
   }
 
 }
+
+
