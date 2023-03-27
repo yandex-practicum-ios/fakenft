@@ -7,7 +7,7 @@
       "data": [
         {
           "title": "Peach", 
-          "someInt": 1
+          "someInt": { "int": {"min": 0, "max": 1000000}}
         }
       ]
     }
