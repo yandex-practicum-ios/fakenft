@@ -3,6 +3,18 @@
     "title": { "string": {} }
   },
   "Collection": {
-    "title": { "string": ["Peach", "Brown", "White", "Gray", "Yellow", "Green", "Blue", "Beige", "Pink"] }
+    "_": {
+      "data": [
+        { "title": "Peach" }, 
+        { "title": "Brown" },
+        { "title": "White" },
+        { "title": "Gray" },
+        { "title": "Yellow" },
+        { "title": "Green" },
+        { "title": "Blue" },
+        { "title": "Beige" },
+        { "title": "Pink" }
+      ]
+    }
   }
 }
