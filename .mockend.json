@@ -13,7 +13,10 @@
       }
   },
   "Nft": {
-    "title": { "string": {} }
+    "title": { "string": {} },
+    "collection": {
+      "belongsTo": "Collection"
+    }
   }
 }
 
