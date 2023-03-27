@@ -19,10 +19,10 @@
       "title": { "string": ["Peach", "Brown", "White", "Gray", "Yellow", "Green", "Blue", "Beige", "Pink"] } , 
       "price": { "int": {"min": 0, "max": 1000000}},
       "nfts": {
-        "hasMany": "NFT"
+        "hasMany": "Nft"
       }
   },
-  "NFT": {
+  "Nft": {
     "title": { "string": {} }
   }
 }
