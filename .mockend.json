@@ -5,7 +5,7 @@
   "Collection": {
     "_": {
       "data": [
-        { "title": "Peach" }, 
+        { "title": "Peach", "someInt": { "integer": {} } }, 
         { "title": "Brown" },
         { "title": "White" },
         { "title": "Gray" },
