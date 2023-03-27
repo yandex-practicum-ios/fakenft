@@ -2,7 +2,7 @@
   "User": {
     "title": { "string": {} }
   },
-  "Collections": {
+  "Collection": {
     "title": { "string": ["Peach", "Brown", "White", "Gray", "Yellow", "Green", "Blue", "Beige", "Pink"] }
   }
 }
