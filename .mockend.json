@@ -5,7 +5,10 @@
   "Collection": {
     "_": {
       "data": [
-        { { "title": "Peach" }, { "someInt": { "int": {"min": 0, "max": 1000000} } } }
+        {
+          "title": "Peach", 
+          "someInt": { "int": {"min": 0, "max": 1000000} } 
+        }
         // , 
         // { "title": "Brown", "someInt": { "int": {"min": 0, "max": 1000000} } },
         // { "title": "White", "someInt": { "int": {"min": 0, "max": 1000000} } },
