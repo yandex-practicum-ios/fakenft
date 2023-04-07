@@ -17,7 +17,19 @@
     "collection": {
       "belongsTo": "Collection"
     }
+  },
+  "Currency": {
+    "_": {
+      "data": [
+        { "id": 1, "title": "Bitcoin", "name": "BTC", "image": "s3..."}, 
+        { "id": 2, "title": "Dogecoin", "name": "DOGE", "image": "s3..."}, 
+        { "id": 3, "title": "Tether", "name": "USDT", "image": "s3..."}, 
+        { "id": 4, "title": "Apecoin", "name": "APE", "image": "s3..."}, 
+        { "id": 5, "title": "Solana", "name": "SOL", "image": "s3..."}, 
+        { "id": 6, "title": "Ethereum", "name": "ETH", "image": "s3..."}, 
+        { "id": 7, "title": "Cardano", "name": "ADA", "image": "s3..."}, 
+        { "id": 8, "title": "Shiba Inu", "name": "SHIB", "image": "s3..."}
+      ]
+    }
   }
 }
-
-
