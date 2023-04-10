@@ -35,14 +35,14 @@
   "Payment": {
     "_": {
       "data": [
-        { "currency_id": 1, "order_id": 24936, "status": true}, 
-        { "currency_id": 2, "order_id": 24936, "status": false}, 
-        { "currency_id": 3, "order_id": 24936, "status": true}, 
-        { "currency_id": 4, "order_id": 24936, "status": false}, 
-        { "currency_id": 5, "order_id": 24936, "status": true}, 
-        { "currency_id": 6, "order_id": 24936, "status": false}, 
-        { "currency_id": 7, "order_id": 24936, "status": true}, 
-        { "currency_id": 8, "order_id": 24936, "status": false}, 
+        { "currency_id": 1, "order_id": 24936, "status": "success"}, 
+        { "currency_id": 2, "order_id": 24936, "status": "success"}, 
+        { "currency_id": 3, "order_id": 24936, "status": "failed"}, 
+        { "currency_id": 4, "order_id": 24936, "status": "failed"}, 
+        { "currency_id": 5, "order_id": 24936, "status": "success"}, 
+        { "currency_id": 6, "order_id": 24936, "status": "failed"}, 
+        { "currency_id": 7, "order_id": 24936, "status": "success"}, 
+        { "currency_id": 8, "order_id": 24936, "status": "failed"}
       ]
     }
   }
