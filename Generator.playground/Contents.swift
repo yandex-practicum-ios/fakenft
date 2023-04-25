@@ -400,7 +400,7 @@ func printNFT() {
 
 
 func printCreated() {
-    print("\"createdAt\": \"2023-04-20T02:22:27.275Z\",")
+    print("\"createdAt\": \"2023-04-20T02:22:27Z\",")
 }
 
 func printName(_ name: String) {
@@ -534,10 +534,11 @@ func printUserNFTs(_ userId: Int) {
         print("\"nfts\": [],")
     }
 }
-//
-//func printUserRating {
-//    "rating": "rating 1",
-//}
+
+func printUserRating(_ id: Int) {
+    let rating = (177 - id) % 100 + 1
+    print("\"rating\": \"\(rating)\",")
+}
 
 func printUsers() {
     let userCount = 100
@@ -550,7 +551,7 @@ func printUsers() {
         printDescription(userDescriptions[userId % userDescriptions.count])
         printUserWebsite(websites[userId % websites.count])
         printUserNFTs(userId)
-        //printRating?
+        printUserRating(userId)
         printId(userId)
         if userId == userCount {
             print("}")
@@ -592,7 +593,7 @@ func printPayment() {
     print("""
 [
  {
-  "success": false,
+  "success": true,
   "id": "1",
   "orderId": "1"
  },
@@ -602,12 +603,12 @@ func printPayment() {
   "orderId": "1"
  },
  {
-  "success": false,
+  "success": true,
   "id": "3",
   "orderId": "1"
  },
  {
-  "success": false,
+  "success": true,
   "id": "4",
   "orderId": "1"
  },
@@ -692,8 +693,8 @@ func printCurrencies() {
 
 //printNFT()
 //printCollections()
-//printUsers()
+printUsers()
 //printProfile()
-//printOrders() //print("\"nfts\": ,")
+//printOrders()
 //printPayment()
 //printCurrencies()

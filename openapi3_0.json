@@ -1,0 +1,593 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Currencies API",
+    "description": "Моковое API для дипломного проекта курса iOS-разработчик",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://64411f3a792fe886a89efa72.mockapi.io"
+    }
+  ],
+  "paths": {
+    "/api/v1/nft": {
+      "get": {
+        "summary": "Получение списка NFT",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "createdAt": {
+                        "type": "string",
+                        "example": "2023-04-20T02:22:27Z"
+                      },
+                      "name": {
+                        "type": "string",
+                        "example": "April"
+                      },
+                      "images": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "example": "https://code.s3.yandex.net/Mobile/iOS/NFT/Beige/April/1.png"
+                        }
+                      },
+                      "rating": {
+                        "type": "integer",
+                        "example": 5
+                      },
+                      "description": {
+                        "type": "string",
+                        "example": "A 3D model of a mythical creature."
+                      },
+                      "price": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 8.81
+                      },
+                      "id": {
+                        "type": "string",
+                        "example": "1"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "NFT"
+        ]
+      }
+    },
+    "/api/v1/nft/{nft_id}": {
+      "get": {
+        "summary": "Получение NFT с заданным Id",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "createdAt": {
+                      "type": "string",
+                      "example": "2023-04-20T02:22:27Z"
+                    },
+                    "name": {
+                      "type": "string",
+                      "example": "April"
+                    },
+                    "images": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "https://code.s3.yandex.net/Mobile/iOS/NFT/Beige/April/1.png"
+                      }
+                    },
+                    "rating": {
+                      "type": "integer",
+                      "example": 5
+                    },
+                    "description": {
+                      "type": "string",
+                      "example": "A 3D model of a mythical creature."
+                    },
+                    "price": {
+                      "type": "number",
+                      "format": "float",
+                      "example": 8.81
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "1"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "nft_id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "Id of NFT to get"
+          }
+        ],
+        "tags": [
+          "NFT"
+        ]
+      }
+    },
+    "/api/v1/collections": {
+      "get": {
+        "summary": "Получение списка коллекций",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "createdAt": {
+                        "type": "string",
+                        "example": "2023-04-20T02:22:27Z"
+                      },
+                      "name": {
+                        "type": "string",
+                        "example": "Beige"
+                      },
+                      "cover": {
+                        "type": "string",
+                        "example": "https://code.s3.yandex.net/Mobile/iOS/NFT/Обложки_коллекций/Beige.png"
+                      },
+                      "nfts": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer",
+                          "example": 16
+                        }
+                      },
+                      "description": {
+                        "type": "string",
+                        "example": "A series of one-of-a-kind NFTs featuring historic moments in sports history."
+                      },
+                      "id": {
+                        "type": "string",
+                        "example": "1"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Collections"
+        ]
+      }
+    },
+    "/api/v1/collections/{collection_id}": {
+      "get": {
+        "summary": "Получение коллекции с заданным id",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "createdAt": {
+                      "type": "string",
+                      "example": "2023-04-20T02:22:27Z"
+                    },
+                    "name": {
+                      "type": "string",
+                      "example": "Beige"
+                    },
+                    "cover": {
+                      "type": "string",
+                      "example": "https://code.s3.yandex.net/Mobile/iOS/NFT/Обложки_коллекций/Beige.png"
+                    },
+                    "nfts": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer",
+                        "example": 21
+                      }
+                    },
+                    "description": {
+                      "type": "string",
+                      "example": "A series of one-of-a-kind NFTs featuring historic moments in sports history."
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "1"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "collection_id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "Id of collection to get"
+          }
+        ],
+        "tags": [
+          "Collections"
+        ]
+      }
+    },
+    "/api/v1/users": {
+      "get": {
+        "summary": "Получение списка пользователей",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "example": "Lucille Heaney"
+                      },
+                      "avatar": {
+                        "type": "string",
+                        "example": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/753.jpg"
+                      },
+                      "description": {
+                        "type": "string",
+                        "example": "Supporting artists through NFTs is my passion ❤"
+                      },
+                      "website": {
+                        "type": "string",
+                        "example": "https://practicum.yandex.ru/promo/courses/email-marketing"
+                      },
+                      "nfts": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer",
+                          "example": 72
+                        }
+                      },
+                      "rating": {
+                        "type": "string",
+                        "example": "10"
+                      },
+                      "id": {
+                        "type": "string",
+                        "example": "3"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Users"
+        ]
+      }
+    },
+    "/api/v1/users/{user_id}": {
+      "get": {
+        "summary": "Получение пользователя с заданным id",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "example": "Lucille Heaney"
+                    },
+                    "avatar": {
+                      "type": "string",
+                      "example": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/753.jpg"
+                    },
+                    "description": {
+                      "type": "string",
+                      "example": "Supporting artists through NFTs is my passion ❤"
+                    },
+                    "website": {
+                      "type": "string",
+                      "example": "https://practicum.yandex.ru/promo/courses/email-marketing"
+                    },
+                    "nfts": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer",
+                        "example": 72
+                      }
+                    },
+                    "rating": {
+                      "type": "string",
+                      "example": "10"
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "3"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user_id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "Id пользователя"
+          }
+        ],
+        "tags": [
+          "Users"
+        ]
+      }
+    },
+    "/api/v1/profile/1": {
+      "get": {
+        "summary": "Получение профиля",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "example": "Студентус Практикумус"
+                    },
+                    "avatar": {
+                      "type": "string",
+                      "example": "https://code.s3.yandex.net/landings-v2-ios-developer/space.PNG"
+                    },
+                    "description": {
+                      "type": "string",
+                      "example": "Прошел 5-й спринт, и этот пройду"
+                    },
+                    "website": {
+                      "type": "string",
+                      "example": "https://practicum.yandex.ru/ios-developer"
+                    },
+                    "nfts": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer",
+                        "example": 68
+                      }
+                    },
+                    "likes": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer",
+                        "example": 5
+                      }
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "1"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Profile"
+        ]
+      }
+    },
+    "/api/v1/orders/1": {
+      "get": {
+        "summary": "Получение заказа",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "nfts": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer",
+                        "example": 93
+                      }
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "1"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Cart"
+        ]
+      }
+    },
+    "/api/v1/currencies": {
+      "get": {
+        "summary": "Получение списка валют",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "example": "Bitcoin"
+                      },
+                      "name": {
+                        "type": "string",
+                        "example": "BTC"
+                      },
+                      "image": {
+                        "type": "string",
+                        "example": "https://code.s3.yandex.net/Mobile/iOS/Currencies/Bitcoin_(BTC).png"
+                      },
+                      "id": {
+                        "type": "string",
+                        "example": "1"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Cart"
+        ]
+      }
+    },
+    "/api/v1/currencies/{currency_id}": {
+      "get": {
+        "summary": "Получение валюты с заданным id",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "example": "Bitcoin"
+                    },
+                    "name": {
+                      "type": "string",
+                      "example": "BTC"
+                    },
+                    "image": {
+                      "type": "string",
+                      "example": "https://code.s3.yandex.net/Mobile/iOS/Currencies/Bitcoin_(BTC).png"
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "1"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "currency_id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "Id of currency to get"
+          }
+        ],
+        "tags": [
+          "Cart"
+        ]
+      }
+    },
+    "/api/v1/orders/1/payment/{currency_id}": {
+      "get": {
+        "summary": "Оплата заказа валютой с заданным id",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "orderId": {
+                      "type": "string",
+                      "example": "1"
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "3"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "currency_id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "Id валюты для оплаты"
+          }
+        ],
+        "tags": [
+          "Cart"
+        ]
+      }
+    }
+  }
+}
