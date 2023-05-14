@@ -447,7 +447,7 @@ func printCollectionNft(_ nfts: [Int]) {
 
 func printAuthor(_ collectionId: Int) {
     let authorId = collectionId * 3 + 3
-    print("\"author\": \(authorId)")
+    print("\"author\": \(authorId),")
 }
 
 func printCollections() {
@@ -698,7 +698,7 @@ func printCurrencies() {
 }
 
 //printNFT()
-//printCollections()
+printCollections()
 //printUsers()
 //printProfile()
 //printOrders()
