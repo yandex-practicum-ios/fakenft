@@ -698,7 +698,7 @@ func printCurrencies() {
 }
 
 //printNFT()
-printCollections()
+//printCollections()
 //printUsers()
 //printProfile()
 //printOrders()

@@ -129,6 +129,9 @@
                         description:
                           type: string
                           example: "A series of one-of-a-kind NFTs featuring historic moments in sports history."
+                        author:
+                          type: integer
+                          example: 49
                         id:
                           type: string
                           example: "1"
