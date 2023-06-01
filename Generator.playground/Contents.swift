@@ -385,6 +385,7 @@ func printNFT() {
             printRating()
             printDescription(nftDescriptions[id%nftDescriptions.count])
             printPrice()
+            printAuthor(collection.id)
             printId(id)
             if collection.id == collections.last!.id && collection.nfts.last == nft {
                 print("}")
@@ -451,7 +452,6 @@ func printAuthor(_ collectionId: Int) {
 }
 
 func printCollections() {
-    var collectionId = 1
     var nftId = 1
     print("[")
     for collection in collections {
@@ -461,16 +461,15 @@ func printCollections() {
         printCover(collection.cover)
         let nfts: [Int] = Array(nftId...nftId + collection.nfts.count - 1)
         printCollectionNft(nfts)
-        printDescription(collectionDescriptions[collectionId%collectionDescriptions.count])
-        printAuthor(collectionId)
-        printId(collectionId)
+        printDescription(collectionDescriptions[collection.id%collectionDescriptions.count])
+        printAuthor(collection.id)
+        printId(collection.id)
         if collection.id == collections.last!.id {
             print("}")
         } else {
             print("},")
         }
 
-        collectionId = collectionId + 1
         nftId = nftId + collection.nfts.count
     }
     print("]")
@@ -697,8 +696,8 @@ func printCurrencies() {
 """)
 }
 
-//printNFT()
-printCollections()
+printNFT()
+//printCollections()
 //printUsers()
 //printProfile()
 //printOrders()
