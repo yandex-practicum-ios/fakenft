@@ -442,13 +442,13 @@ func printCover(_ cover: String) {
     print("\"cover\": \"" + cover + "\",")
 }
 
-func printCollectionNft(_ nfts: [Int]) {
+func printCollectionNft(_ nfts: [String]) {
     print("\"nfts\": \(nfts),")
 }
 
 func printAuthor(_ collectionId: Int) {
     let authorId = collectionId * 3 + 3
-    print("\"author\": \(authorId),")
+    print("\"author\": \"\(authorId)\",")
 }
 
 func printCollections() {
@@ -459,7 +459,7 @@ func printCollections() {
         printCreated()
         printName(collection.name)
         printCover(collection.cover)
-        let nfts: [Int] = Array(nftId...nftId + collection.nfts.count - 1)
+        let nfts: [String] = Array(nftId...nftId + collection.nfts.count - 1).map(String.init)
         printCollectionNft(nfts)
         printDescription(collectionDescriptions[collection.id%collectionDescriptions.count])
         printAuthor(collection.id)
@@ -498,43 +498,42 @@ func printUserWebsite(_ site: String) {
 }
 
 func printUserNFTs(_ userId: Int) {
-    var nfts: [Int]
     if userId == 1 {
-        print("\"nfts\": [1, 4, 6, 8],")
+        print("\"nfts\": [\"1\", \"4\", \"6\", \"8\"],")
     } else if userId == 2 {
-        print("\"nfts\": [2, 3, 5, 7, 9],")
+        print("\"nfts\": [\"2\", \"3\", \"5\", \"7\", \"9\"],")
     } else if userId == 3 {
-        print("\"nfts\": [10, 13, 25],")
+        print("\"nfts\": [\"10\", \"13\", \"25\"],")
     } else if userId == 4 {
-        print("\"nfts\": [11, 12],")
+        print("\"nfts\": [\"11\", \"12\"],")
     } else if userId == 15 {
-        print("\"nfts\": [14, 15, 16, 18, 19, 20],")
+        print("\"nfts\": [\"14\", \"15\", \"16\", \"18\", \"19\", \"20\"],")
     } else if userId == 16 {
-        print("\"nfts\": [21, 22, 23],")
+        print("\"nfts\": [\"21\", \"22\", \"23\"],")
     } else if userId == 17 {
-        print("\"nfts\": [24, 26, 27],")
+        print("\"nfts\": [\"24\", \"26\", \"27\"],")
     } else if userId == 28 {
-        print("\"nfts\": [28],")
+        print("\"nfts\": [\"28\"],")
     } else if userId == 29 {
-        print("\"nfts\": [29, 31, 35, 36, 37, 38, 39],")
+        print("\"nfts\": [\"29\", \"31\", \"35\", \"36\", \"37\", \"38\", \"39\"],")
     } else if userId == 30 {
-        print("\"nfts\": [30, 32],")
+        print("\"nfts\": [\"30\", \"32\"],")
     } else if userId == 31 {
-        print("\"nfts\": [33, 34],")
+        print("\"nfts\": [\"33\", \"34\"],")
     } else if userId == 42 {
-        print("\"nfts\": [40, 41, 42, 44, 45, 46, 47, 48, 49],")
+        print("\"nfts\": [\"40\", \"41\", \"42\", \"44\", \"45\", \"46\", \"47\", \"48\", \"49\"],")
     } else if userId == 43 {
-        print("\"nfts\": [43, 50, 52, 56, 57, 58],")
+        print("\"nfts\": [\"43\", \"50\", \"52\", \"56\", \"57\", \"58\"],")
     } else if userId == 44 {
-        print("\"nfts\": [51, 53, 54, 55],")
+        print("\"nfts\": [\"51\", \"53\", \"54\", \"55\"],")
     } else if userId == 55 {
-        print("\"nfts\": [59, 60, 61, 62, 63, 64, 65, 66, 67, 70],")
+        print("\"nfts\": [\"59\", \"60\", \"61\", \"62\", \"63\", \"64\", \"65\", \"66\", \"67\", \"70\"],")
     } else if userId == 57 {
-        print("\"nfts\": [82],")
+        print("\"nfts\": [\"82\"],")
     } else if userId == 68 {
-        print("\"nfts\": [83, 84, 85, 86, 87],")
+        print("\"nfts\": [\"83\", \"84\", \"85\", \"86\", \"87\"],")
     } else if userId == 69 {
-        print("\"nfts\": [88, 89, 90, 91, 92],")
+        print("\"nfts\": [\"88\", \"89\", \"90\", \"91\", \"92\"],")
     } else {
         print("\"nfts\": [],")
     }
@@ -575,8 +574,8 @@ func printProfile() {
       "avatar": "https://code.s3.yandex.net/landings-v2-ios-developer/space.PNG",
       "description": "Прошел 5-й спринт, и этот пройду",
       "website": "https://practicum.yandex.ru/ios-developer/",
-      "nfts": [68, 69, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81],
-      "likes": [5, 13, 19, 26, 27, 33, 35, 39, 41, 47, 56, 66],
+      "nfts": ["68", "69", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81"],
+      "likes": ["5", "13", "19", "26", "27", "33", "35", "39", "41", "47", "56", "66"],
       "id": "1"
      }
     ]
@@ -587,7 +586,7 @@ func printOrders() {
     print("""
 [
   {
-    "nfts": [93, 94, 95],
+    "nfts": ["93", "94", "95"],
     "id": "1"
   }
 ]
@@ -697,9 +696,9 @@ func printCurrencies() {
 }
 
 printNFT()
+//printCurrencies()
 //printCollections()
 //printUsers()
 //printProfile()
 //printOrders()
 //printPayment()
-//printCurrencies()

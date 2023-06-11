@@ -58,8 +58,8 @@
                         "example": 8.81
                       },
                       "author": {
-                        "type": "integer",
-                        "example": 49
+                        "type": "string",
+                        "example": "49"
                       },
                       "id": {
                         "type": "string",
@@ -122,8 +122,8 @@
                       "example": 8.81
                     },
                     "author": {
-                      "type": "integer",
-                      "example": 49
+                      "type": "string",
+                      "example": "49"
                     },
                     "id": {
                       "type": "string",
@@ -140,7 +140,7 @@
             "in": "path",
             "name": "nft_id",
             "schema": {
-              "type": "integer"
+              "type": "string"
             },
             "required": true,
             "description": "Id of NFT to get"
@@ -179,30 +179,30 @@
                       "nfts": {
                         "type": "array",
                         "items": {
-                          "type": "integer"
+                          "type": "string"
                         },
                         "example": [
-                          1,
-                          2,
-                          3,
-                          4,
-                          5,
-                          6,
-                          7,
-                          8,
-                          9,
-                          10,
-                          11,
-                          12,
-                          13,
-                          14,
-                          15,
-                          16,
-                          17,
-                          18,
-                          19,
-                          20,
-                          21
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6",
+                          "7",
+                          "8",
+                          "9",
+                          "10",
+                          "11",
+                          "12",
+                          "13",
+                          "14",
+                          "15",
+                          "16",
+                          "17",
+                          "18",
+                          "19",
+                          "20",
+                          "21"
                         ]
                       },
                       "description": {
@@ -210,8 +210,8 @@
                         "example": "A series of one-of-a-kind NFTs featuring historic moments in sports history."
                       },
                       "author": {
-                        "type": "integer",
-                        "example": 49
+                        "type": "string",
+                        "example": "49"
                       },
                       "id": {
                         "type": "string",
@@ -255,30 +255,30 @@
                     "nfts": {
                       "type": "array",
                       "items": {
-                        "type": "integer"
+                        "type": "string"
                       },
                       "example": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9",
+                        "10",
+                        "11",
+                        "12",
+                        "13",
+                        "14",
+                        "15",
+                        "16",
+                        "17",
+                        "18",
+                        "19",
+                        "20",
+                        "21"
                       ]
                     },
                     "description": {
@@ -286,8 +286,8 @@
                       "example": "A series of one-of-a-kind NFTs featuring historic moments in sports history."
                     },
                     "author": {
-                      "type": "integer",
-                      "example": 49
+                      "type": "string",
+                      "example": "49"
                     },
                     "id": {
                       "type": "string",
@@ -304,7 +304,7 @@
             "in": "path",
             "name": "collection_id",
             "schema": {
-              "type": "integer"
+              "type": "string"
             },
             "required": true,
             "description": "Id of collection to get"
@@ -343,7 +343,7 @@
                       "nfts": {
                         "type": "array",
                         "items": {
-                          "type": "integer"
+                          "type": "string"
                         }
                       },
                       "rating": {
@@ -359,9 +359,9 @@
                       "description": "Supporting artists through NFTs is my passion ❤",
                       "website": "https://practicum.yandex.ru/promo/courses/email-marketing",
                       "nfts": [
-                        1,
-                        4,
-                        5
+                        "1",
+                        "4",
+                        "5"
                       ],
                       "rating": 10,
                       "id": "3"
@@ -403,7 +403,7 @@
                     "nfts": {
                       "type": "array",
                       "items": {
-                        "type": "integer"
+                        "type": "string"
                       }
                     },
                     "rating": {
@@ -419,9 +419,9 @@
                     "description": "Supporting artists through NFTs is my passion ❤",
                     "website": "https://practicum.yandex.ru/promo/courses/email-marketing",
                     "nfts": [
-                      1,
-                      4,
-                      5
+                      "1",
+                      "4",
+                      "5"
                     ],
                     "rating": 10,
                     "id": "3"
@@ -436,7 +436,7 @@
             "in": "path",
             "name": "user_id",
             "schema": {
-              "type": "integer"
+              "type": "string"
             },
             "required": true,
             "description": "Id пользователя"
@@ -477,41 +477,41 @@
                     "nfts": {
                       "type": "array",
                       "items": {
-                        "type": "integer",
+                        "type": "string",
                         "example": [
-                          68,
-                          69,
-                          71,
-                          72,
-                          73,
-                          74,
-                          75,
-                          76,
-                          77,
-                          78,
-                          79,
-                          80,
-                          81
+                          "68",
+                          "69",
+                          "71",
+                          "72",
+                          "73",
+                          "74",
+                          "75",
+                          "76",
+                          "77",
+                          "78",
+                          "79",
+                          "80",
+                          "81"
                         ]
                       }
                     },
                     "likes": {
                       "type": "array",
                       "items": {
-                        "type": "integer",
+                        "type": "string",
                         "example": [
-                          5,
-                          13,
-                          19,
-                          26,
-                          27,
-                          33,
-                          35,
-                          39,
-                          41,
-                          47,
-                          56,
-                          66
+                          "5",
+                          "13",
+                          "19",
+                          "26",
+                          "27",
+                          "33",
+                          "35",
+                          "39",
+                          "41",
+                          "47",
+                          "56",
+                          "66"
                         ]
                       }
                     },
@@ -551,20 +551,20 @@
                   "likes": {
                     "type": "array",
                     "items": {
-                      "type": "integer",
+                      "type": "string",
                       "example": [
-                        5,
-                        13,
-                        19,
-                        26,
-                        27,
-                        33,
-                        35,
-                        39,
-                        41,
-                        47,
-                        56,
-                        66
+                        "5",
+                        "13",
+                        "19",
+                        "26",
+                        "27",
+                        "33",
+                        "35",
+                        "39",
+                        "41",
+                        "47",
+                        "56",
+                        "66"
                       ]
                     }
                   }
@@ -600,41 +600,41 @@
                     "nfts": {
                       "type": "array",
                       "items": {
-                        "type": "integer",
+                        "type": "string",
                         "example": [
-                          68,
-                          69,
-                          71,
-                          72,
-                          73,
-                          74,
-                          75,
-                          76,
-                          77,
-                          78,
-                          79,
-                          80,
-                          81
+                          "68",
+                          "69",
+                          "71",
+                          "72",
+                          "73",
+                          "74",
+                          "75",
+                          "76",
+                          "77",
+                          "78",
+                          "79",
+                          "80",
+                          "81"
                         ]
                       }
                     },
                     "likes": {
                       "type": "array",
                       "items": {
-                        "type": "integer",
+                        "type": "string",
                         "example": [
-                          5,
-                          13,
-                          19,
-                          26,
-                          27,
-                          33,
-                          35,
-                          39,
-                          41,
-                          47,
-                          56,
-                          66
+                          "5",
+                          "13",
+                          "19",
+                          "26",
+                          "27",
+                          "33",
+                          "35",
+                          "39",
+                          "41",
+                          "47",
+                          "56",
+                          "66"
                         ]
                       }
                     },
@@ -667,11 +667,11 @@
                     "nfts": {
                       "type": "array",
                       "items": {
-                        "type": "integer",
+                        "type": "string",
                         "example": [
-                          93,
-                          94,
-                          95
+                          "93",
+                          "94",
+                          "95"
                         ]
                       }
                     },
@@ -701,11 +701,11 @@
                   "nfts": {
                     "type": "array",
                     "items": {
-                      "type": "integer",
+                      "type": "string",
                       "example": [
-                        93,
-                        94,
-                        95
+                        "93",
+                        "94",
+                        "95"
                       ]
                     }
                   }
@@ -725,11 +725,11 @@
                     "nfts": {
                       "type": "array",
                       "items": {
-                        "type": "integer",
+                        "type": "string",
                         "example": [
-                          93,
-                          94,
-                          95
+                          "93",
+                          "94",
+                          "95"
                         ]
                       }
                     },
