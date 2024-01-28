@@ -604,6 +604,10 @@
                   "description": {
                     "type": "string"
                   },
+                  "avatar": {
+                    "type": "string",
+                    "example": "https://s3.yandex.ru/ios-developer/avatars/small.png"
+                  },
                   "website": {
                     "type": "string",
                     "example": "https://practicum.yandex.ru/ios-developer"

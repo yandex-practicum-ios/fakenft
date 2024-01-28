@@ -1,0 +1,1 @@
+mkdir -p -m 777 build && docker run --rm --user 1000   -v $PWD/build:/tmp/build -w /tmp/build   -v $PWD/openapi3_0.json:/tmp/openapi3_0.json node:14-slim npx -q   redoc-cli bundle /tmp/openapi3_0.json
