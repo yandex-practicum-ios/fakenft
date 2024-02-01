@@ -3,11 +3,11 @@
   "info": {
     "title": "FakeNFT API",
     "description": "API for retrieving NFT information",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "servers": [
     {
-      "url": "https://64858e8ba795d24810b71189.mockapi.io"
+      "url": "https://d5dn3j2ouj72b0ejucbl.apigw.yandexcloud.net"
     }
   ],
   "paths": {
@@ -72,6 +72,35 @@
             }
           }
         },
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page number",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "page size",
+            "schema": {
+              "type": "integer",
+              "default": 25
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "description": "sort field,direction",
+            "schema": {
+              "type": "string",
+              "default": null
+            }
+          }
+        ],
         "tags": [
           "NFT"
         ]
@@ -224,6 +253,35 @@
             }
           }
         },
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page number",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "page size",
+            "schema": {
+              "type": "integer",
+              "default": 25
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "description": "sort field,direction",
+            "schema": {
+              "type": "string",
+              "default": null
+            }
+          }
+        ],
         "tags": [
           "Collections"
         ]
@@ -372,6 +430,35 @@
             }
           }
         },
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page number",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "page size",
+            "schema": {
+              "type": "integer",
+              "default": 25
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "description": "sort field,direction",
+            "schema": {
+              "type": "string",
+              "default": null
+            }
+          }
+        ],
         "tags": [
           "Users"
         ]
@@ -478,41 +565,14 @@
                       "type": "array",
                       "items": {
                         "type": "string",
-                        "example": [
-                          "68",
-                          "69",
-                          "71",
-                          "72",
-                          "73",
-                          "74",
-                          "75",
-                          "76",
-                          "77",
-                          "78",
-                          "79",
-                          "80",
-                          "81"
-                        ]
+                        "example": "123,456"
                       }
                     },
                     "likes": {
                       "type": "array",
                       "items": {
                         "type": "string",
-                        "example": [
-                          "5",
-                          "13",
-                          "19",
-                          "26",
-                          "27",
-                          "33",
-                          "35",
-                          "39",
-                          "41",
-                          "47",
-                          "56",
-                          "66"
-                        ]
+                        "example": "1,3,5,6"
                       }
                     },
                     "id": {
@@ -544,6 +604,10 @@
                   "description": {
                     "type": "string"
                   },
+                  "avatar": {
+                    "type": "string",
+                    "example": "https://s3.yandex.ru/ios-developer/avatars/small.png"
+                  },
                   "website": {
                     "type": "string",
                     "example": "https://practicum.yandex.ru/ios-developer"
@@ -552,20 +616,7 @@
                     "type": "array",
                     "items": {
                       "type": "string",
-                      "example": [
-                        "5",
-                        "13",
-                        "19",
-                        "26",
-                        "27",
-                        "33",
-                        "35",
-                        "39",
-                        "41",
-                        "47",
-                        "56",
-                        "66"
-                      ]
+                      "example": "1,3,5"
                     }
                   }
                 }
@@ -601,41 +652,14 @@
                       "type": "array",
                       "items": {
                         "type": "string",
-                        "example": [
-                          "68",
-                          "69",
-                          "71",
-                          "72",
-                          "73",
-                          "74",
-                          "75",
-                          "76",
-                          "77",
-                          "78",
-                          "79",
-                          "80",
-                          "81"
-                        ]
+                        "example": "1,2,3"
                       }
                     },
                     "likes": {
                       "type": "array",
                       "items": {
                         "type": "string",
-                        "example": [
-                          "5",
-                          "13",
-                          "19",
-                          "26",
-                          "27",
-                          "33",
-                          "35",
-                          "39",
-                          "41",
-                          "47",
-                          "56",
-                          "66"
-                        ]
+                        "example": "93,94,95"
                       }
                     },
                     "id": {
@@ -668,11 +692,7 @@
                       "type": "array",
                       "items": {
                         "type": "string",
-                        "example": [
-                          "93",
-                          "94",
-                          "95"
-                        ]
+                        "example": "93,94,95"
                       }
                     },
                     "id": {
@@ -702,11 +722,7 @@
                     "type": "array",
                     "items": {
                       "type": "string",
-                      "example": [
-                        "93",
-                        "94",
-                        "95"
-                      ]
+                      "example": "93,94,95"
                     }
                   }
                 }
@@ -726,11 +742,7 @@
                       "type": "array",
                       "items": {
                         "type": "string",
-                        "example": [
-                          "93",
-                          "94",
-                          "95"
-                        ]
+                        "example": "93,94,95"
                       }
                     },
                     "id": {
