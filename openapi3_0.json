@@ -61,6 +61,10 @@
                         "type": "string",
                         "example": "49"
                       },
+                      "website": {
+                        "type": "string",
+                        "example": "http://author.website"
+                      },
                       "id": {
                         "type": "string",
                         "example": "1"
@@ -154,6 +158,10 @@
                       "type": "string",
                       "example": "49"
                     },
+                    "website": {
+                      "type": "string",
+                      "example": "http://author.website"
+                    },
                     "id": {
                       "type": "string",
                       "example": "1"
@@ -241,6 +249,10 @@
                       "author": {
                         "type": "string",
                         "example": "49"
+                      },
+                      "website": {
+                        "type": "string",
+                        "example": "http://author.website"
                       },
                       "id": {
                         "type": "string",
@@ -346,6 +358,10 @@
                     "author": {
                       "type": "string",
                       "example": "49"
+                    },
+                    "website": {
+                      "type": "string",
+                      "example": "http://author.website"
                     },
                     "id": {
                       "type": "string",
@@ -711,6 +727,56 @@
       },
       "put": {
         "summary": "Изменение заказа",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "nfts": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "example": "93,94,95"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "nfts": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "93,94,95"
+                      }
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "1"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Order and Payment"
+        ]
+      },
+      "post": {
+        "summary": "Выполнение заказа и очистка",
         "requestBody": {
           "required": false,
           "content": {
